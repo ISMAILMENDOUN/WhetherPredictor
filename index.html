@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-uwfa0v4aB5+0PsE4fSyOWQ9t+VPRFCSH0Up+02J9j0m0RDCRyS3QgsO6ybrABmtVC7xPjMgGaf9/AClXmMa8Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="searchUnit">
+    <div class="search"><input id="city" type="text"><br><br><a href="#anotherCity" onclick="getCity()">Search a city</a></div>
+    <div class="unt"><input id="units" list="units1">
+        <datalist id="units1">
+            <option value="Celisius">
+            <option value="Kelvin">
+            <option value="Fahrenheit">
+        </datalist><br><br><a href="#anotherCity" onclick="changeUnits()">Change unit</a>
+    </div>
+</div>
+
+    <section class="main">
+        
+        <!--<div><h2 id="mCityName"></h2></div>
+            <div><h3 id="mCountry"></h3></div>
+            <div><img src="" alt="" id="myIcon"></div>
+            <div><p id="myWeather"></p></div>
+            <div><p id="mCity"></p></div>
+            <div><p id="myHumidity"></p></div>
+            <div><p id="myWind"></p></div>
+        <div><div><h2 id="mCityName"></h2></div>
+        <div><h3 id="mCountry"></h3></div>
+        <div><img src="" alt="" id="myIcon1"></div>
+        <div><p id="myWeather1"></p></div>
+        <div><p id="mCity1"></p></div>
+        <div><p id="myHumidity1"></p></div>
+        <div><p id="myWind1"></p></div></div>-->
+        <div class="chartMain">
+            <canvas id="myChart"></canvas>
+        </div>
+
+
+
+
+    </section>
+
+    <section id="anotherCity" class="anotherCity">
+
+    </section>
+    <section class="Forecast"></section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>

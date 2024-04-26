@@ -1,0 +1,72 @@
+.searchUnit {
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    width: 100 vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.search,
+.unt {
+    
+    margin-left: 10vw;
+    display: flex;
+    flex-wrap: nowrap;
+
+
+
+}
+
+.searchUnit a{margin-left:3vw;
+width:auto;}
+#city,#units{
+
+    width:20vw;
+    height:auto;
+    min-height:20px;
+    min-width:100px;
+}
+.chartMain{
+
+width:40vw;
+min-width:310px;
+min-height:402px;
+
+}
+#myChart1{
+    width:40vw;
+  
+    min-width:310px;
+    min-height:200px;
+}
+.main{
+    display:flex;
+    flex-wrap: wrap;
+}
+.anotherC{
+
+    display:flex;
+  
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:480px){
+
+    .search,
+.unt {
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    margin-left: 10vw;
+    display: flex;
+    flex-wrap: nowrap;
+
+
+
+}
+
+
+
+
+}
