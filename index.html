@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-uwfa0v4aB5+0PsE4fSyOWQ9t+VPRFCSH0Up+02J9j0m0RDCRyS3QgsO6ybrABmtVC7xPjMgGaf9/AClXmMa8Nw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/f124013f63.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="searchUnit">
-    <div class="search"><input id="city" type="text"><br><br><a href="#anotherCity" onclick="getCity()">Search a city</a></div>
+    <div class="search"><input id="city" type="text"><br><br><a href="#" onclick="getCity()">Search a city</a></div>
     <div class="unt"><input id="units" list="units1">
         <datalist id="units1">
             <option value="Celisius">
@@ -20,7 +18,9 @@
         </datalist><br><br><a href="#anotherCity" onclick="changeUnits()">Change unit</a>
     </div>
 </div>
-
+<section id="anotherCity" class="anotherCity">
+    
+</section>
     <section class="main">
         
         <!--<div><h2 id="mCityName"></h2></div>
@@ -46,9 +46,8 @@
 
     </section>
 
-    <section id="anotherCity" class="anotherCity">
-
-    </section>
+    
+    
     <section class="Forecast"></section>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
