@@ -170,7 +170,7 @@ anotherCity.appendChild(chartGraph);
 for(let i=1;i<data.list.length;i++){
     
     let d=new Date(data.list[i].dt_txt);
-    if(d.getHours()==12){
+    if(d.getHours()==0){
         let dChart=data.list[i].dt_txt;
 let tempChart=data.list[i].main.temp.toFixed(2)
 if(unit=="metric"){
@@ -376,7 +376,7 @@ main.appendChild(html1);
 for(let i=1;i<data.list.length;i++){
     
     let d=new Date(data.list[i].dt_txt);
-    if(d.getHours()==12){
+    if(d.getHours()==0){
         let dChart=data.list[i].dt_txt;
 let tempChart=data.list[i].main.temp.toFixed(2)
 chartD.push( toDayWeek(dChart));
