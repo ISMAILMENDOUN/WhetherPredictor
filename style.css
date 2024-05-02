@@ -10,298 +10,518 @@
 
 .search,
 .unt {
-    
+
     margin-left: 5vw;
     display: flex;
     flex-wrap: nowrap;
-margin-right: 10vw;
-margin-bottom: 1vh;
+    margin-right: 10vw;
+    margin-bottom: 1vh;
 
 
 }
 
+.searchUnit a {
+    margin-left: 3vw;
+    width: auto;
+    text-decoration: none;
+    padding-inline: 1vw;
+    padding-top: 1.25vh;
+    border-radius: 2vh;
+    color: black;
+    font-weight: bold;
+    border: 1px solid;
+    border-color: black;
+    background-color: white;
+}
 
-.searchUnit a{margin-left:3vw;
-width:auto;
-text-decoration: none;
-padding-inline:1vw;
-padding-top: 1.25vh;
-border-radius: 2vh;
-color: black;
-font-weight: bold;
-border: 1px solid;
-border-color: black;
-background-color: white;}
-.searchUnit a:hover{
+.searchUnit a:hover {
     background-color: #87CEEB;
 }
-#city,#units{
 
-    width:20vw;
-    height:auto;
-    min-height:20px;
-    min-width:100px;
+#city,
+#units {
+
+    width: 20vw;
+    height: auto;
+    min-height: 20px;
+    min-width: 100px;
     border-radius: 2vh;
 }
-.chartMain,.chartAnother{
 
-width:40vw;
-min-width:280px;
-min-height:300px;
-border-radius: 2vh;
-margin-inline:1vw;
+.chartMain,
+.chartAnother {
+
+    width: 40vw;
+   /* min-width: 280px;
+    min-height: 300px;*/
+    border-radius: 2vh;
+    margin-inline: 1vw;
 
 }
-.anotherC{
-    width:40vw;
-min-width:300px;
-min-height:402px;
-display:flex;
-  
+
+.anotherC {
+    width: 40vw;
+    min-width: 300px;
+    min-height: 402px;
+    display: flex;
+
     flex-wrap: wrap;
 }
-.main{
-    display:flex;
+
+.main {
+    display: flex;
     flex-wrap: wrap;
 }
-.main a{
+
+.main a {
     text-decoration: none;
-    color:black;
+    color: black;
 }
-#clickable:hover{
 
-    background-color:#00cccc;
+#clickable:hover {
+    filter: brightness(70%);
+    /*border: 3px solid;
+    border-color:black;
+    background-color:black;*/
 }
-.anotherCity{
+
+.anotherCity {
 
     margin-bottom: 10vh;
-    display:flex;
-   
+    display: flex;
+
     flex-wrap: wrap;
 }
-.chartMain{
+
+.chartMain {
     margin-top: -7vh;
     margin-bottom: 1vh;
     margin-left: 1vw;
     margin-right: 0.75vw;
-    height: 80vh ;
-    
+    height: 80vh;
+
 }
 
-.main>div:not(.chartMain){
-    padding-inline:0.5vw;
-    margin-right:0.7vw;
-    background-color:aqua;
+.main>div:not(.chartMain) {
+    padding-inline: 0.5vw;
+    margin-right: 0.7vw;
+    background-color: aqua;
     border-radius: 5vh;
     width: 14.4vw;
+    margin-top: 1vh;
 }
-.chartMain{
-    background-color:#ffffff;
-    width:100vw;
-    height:auto;
-   
+
+.chartMain {
+    background-color: #ffffff;
+    width: 75vw;
+    height: 75vh;
+    margin-left: 10vw;
+    margin-bottom: 10vh;
+
 
 }
 
-.anotherCity>div{
-    padding-inline:0.5vw;
-    margin-right:1vw;
-    background-color:#191970;
+.anotherCity>div {
+    padding-inline: 0.5vw;
+    margin-right: 1vw;
+    background-color: #191970;
     border-radius: 5vh;
 }
-.anotherCity>div:first-child{background-color:white !important;
-    padding-inline:0vw;
-    border-radius: 2vh;}
-    body{
 
-        background-color:#87CEEB;
+.anotherCity>div:first-child {
+    background-color: white !important;
+    padding-inline: 0vw;
+    border-radius: 2vh;
+}
+
+body {
+
+    background-color: #87CEEB;
+}
+
+#myExtreme {
+    color: red !important;
+}
+
+#myExtreme {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    90% {
+        opacity: 10%;
     }
-    #myExtreme{
-        color: red !important;
-    }
-    #myExtreme {
-        animation: blinker 1s linear infinite;
-      }
-      
-      @keyframes blinker {
-        90% {
-          opacity: 10%;
-        }
-      }
-      .anotherCity>div>div{
-        padding-inline:0.5vw;
-        margin-right:0.7vw;
-        border-radius: 5vh;
-        width: 12.4vw;
-       
-        /*margin-top: 90vh;*/
-    }
-    .anotherCity>div:not(.chartAnother){
-        
-        margin-top: 5vh;
-        /*margin-top: 90vh;*/
-    }
-    .chartAnother{
+}
+
+.anotherCity>div>div {
+    padding-inline: 0.5vw;
+    margin-right: 0.7vw;
+    border-radius: 5vh;
+    width: 12.4vw;
+
+    /*margin-top: 90vh;*/
+}
+
+.anotherCity>div:not(.chartAnother) {
+
+    margin-top: 5vh;
+    /*margin-top: 90vh;*/
+}
+
+/*.chartAnother {
     background-color: white;
-    width:92vw!important;
-    height:auto !important;
-    min-height:300!important;
-    
-   
-   /* margin-top: -90vh;*/
-    
-}
-#myChart1{
-    min-height:300!important;
+    width: 92vw ;
+    height: auto !important;
+    min-height: 300 !important;
+
+
+    /* margin-top: -90vh;
+
+}*/
+
+/*#myChart1 {
+    /*min-height: 300 !i;
     padding-inline: 0;
-    
+
+}*/
+
+
+
+
+
+
+.anotherCity h2 {
+
+
+    font-size: 3vw;
 }
 
-.anotherCity>div:first-child{
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_today-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 
-    margin-right: 5vw!important;
+.main > div:nth-of-type(8) {
+
+    margin-top:1vw;
+}
+.main > div:nth-of-type(2) {
+
+    margin-left: 0.75vw;
+}
+.anotherCity > div:nth-of-type(2) {
+
+    margin-left: 0.75vw;
 }
 
+.return{
+
+
+   margin-top: 5vh;
+   
+   height: 5vh;
+   margin-bottom: -5vh;
+
+}
+.return a{
+    color:red !important;
+ 
+    text-decoration: none;
     
+    }
+    .chartAnother {
+        background-color: #ffffff;
+        width: 75vw !important;
+        height: 75vh !important;
+       /* margin-left: 10vw !important;
+        margin-bottom: 10vh !important;*/
+    
+    
+    }
+
+    .anotherCity>div:first-child {
+       margin-left: 10vw !important;
+        margin-bottom: 10vh !important;
+        margin-right: 5vw !important;
+    }
+
+
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-__-_-__-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-__-_-_-_-_*/
 
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_Tablet&Phone-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 
-      @media screen and (max-width:1038px){
 
-        .main{
-            display:flex;
-            flex-wrap: wrap;
-            margin-left: 1vw;
-        }
-        .main>div:not(.chartMain){
-            padding-inline:0.5vw;
-            margin-right:0.7vw;
-            background-color:aqua;
-            border-radius: 5vh;
-            width: 14.2vw ;
-        }
+/*@media screen and (max-width:913px) {
 
-        .chartMain{
-            width:100vw;
-            margin-bottom: 1vh;
-            height: 70vh auto;
-           
-            
-        }
-
-        #myChart{
-            min-height:342px;
-            margin-bottom: 0;
-
-        }
-
-        
-      }
-      @media screen and (max-width:913px){
-
-        .main>div:not(.chartMain){
-            width: 14vw ;
-            
-           
-        }
-      }
-
-      @media screen and (max-width:683px){
-
-        .main>div:not(.chartMain){
-            width: 13.7vw ;
-            
-           
-        }}
-        @media screen and (max-width:579px){
-
-            .main>div:not(.chartMain){
-                width: 28.4vw ;
-                margin-bottom: 1vh;
-                
-               
-            }}
-            @media screen and (max-width:579px){
-
-                .main>div:not(.chartMain){
-                    width: 27.4vw ;
-                    margin-bottom: 1vh;
-                    
-                   
-                }
+    .main>div:not(.chartMain) {
+        width: 14vw;
 
 
-      }
-@media screen and (max-width:480px){
+    }
+    
+    .anotherCity>div:first-child {
+        margin-left: 15vw ;
+        margin-right:0 ;
+     }
+}*/
+
+/*@media screen and (max-width:683px) {
+
+    .main>div:not(.chartMain) {
+        width: 13.7vw;
+
+
+    }
+}*/
+
+/*@media screen and (max-width:579px) {
+
+    .main>div:not(.chartMain) {
+        width: 28.4vw;
+        margin-bottom: 1vh;
+
+
+    }
+}*/
+
+/*@media screen and (max-width:579px) {
+
+    .main>div:not(.chartMain) {
+        width: 27.4vw;
+        margin-bottom: 1vh;
+
+
+    }
+
+
+}*/
+
+
+
+/*@media screen and (max-width:903px){
+
+    .anotherCity:not(.chartAnother) {
+
+        width: 100vw;
+
+        /*margin-top: 90vh;
+    }
+
+}*/
+
+
+/*@media screen and (max-width:579px) {
+
+    .anotherCity:not(.chartAnother) {
+
+        width: 90vw;
+
+
+    }
+
+    .anotherCity h2 {
+
+
+        font-size: 5vw;
+    }
+
+    .anotherCity>div>div:not(.chartAnother) {
+        width: 26.3vw;
+        margin-bottom: 1vh;
+
+
+    }
+
+}*/
+
+/*@media screen and (max-width:872px) {
+    .chartAnother {
+
+        margin-right: 10vw !important;
+
+        /* margin-top: -90vh;
+
+    }
+
+
+
+}*/
+
+
+
+@media screen and (max-width:1115px) {
+
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 1vw;
+    }
+
+    .main>div:not(.chartMain) {
+        padding-inline: 0.5vw;
+        margin-right: 0.7vw;
+        background-color: aqua;
+        border-radius: 5vh;
+        width: 14vw;
+    }
+    
+    /*.chartMain {
+        width: 100vw;
+        margin-bottom: 1vh;
+        height: 70vh auto;
+
+
+    }*/
+
+    #myChart {
+        min-height: 180px;
+        margin-bottom: 0;
+
+    }
+
+
+    .anotherCity > div:nth-of-type(2) {
+
+        margin-left:2vw;
+    }
+
+    .anotherCity>div>div {
+        padding-inline: 0.5vw;
+        margin-right: 0.7vw;
+        border-radius: 5vh;
+        width: 12vw;
+    
+        /*margin-top: 90vh;*/
+    }
+
+
+
+    .chartMain{
+
+
+
+        height:auto;
+        min-height: 180px;
+    }
+    .chartAnother{
+
+  padding-bottom: -20vh;
+
+        height:auto !important;
+    }
+}
+@media screen and (max-width:860px) {
+
+    .main>div:not(.chartMain) {
+        padding-inline: 0.5vw;
+        margin-right: 0.7vw;
+        background-color: aqua;
+        border-radius: 5vh;
+        width: 22vw;
+        margin-top: 1vh;
+    }
+
+    .anotherCity > div:nth-of-type(2) {
+
+        margin-left:14vw;
+    }
+    .anotherCity > div:nth-of-type(5) {
+
+        margin-left:14vw;
+    }
+    .main > div:nth-of-type(2) {
+
+        margin-left:12vw;
+    }
+    .main > div:nth-of-type(5) {
+
+        margin-left:12vw;
+    }
+
+    .anotherCity>div>div {
+        padding-inline: 0.5vw;
+        margin-right: 0.7vw;
+        border-radius: 5vh;
+        width: 20vw;
+        margin-top: 1vh;
+        /*margin-top: 90vh;*/
+    }
+
+}
+
+@media screen and (max-width:480px) {
 
     .search,
-.unt {
-    margin-bottom: 2vh;
-    margin-top: 2vh;
-    margin-left: 10vw;
-    display: flex;
-    flex-wrap: nowrap;
+    .unt {
+        margin-bottom: 2vh;
+        margin-top: 2vh;
+        margin-left: 10vw;
+        display: flex;
+        flex-wrap: nowrap;
 
 
 
-}
+    }
 
 
+    .main>div:not(.chartMain) {
+        padding-inline: 0.5vw;
+        padding-left: 5vw;
+        margin-right: 0.7vw;
+        background-color: aqua;
+        border-radius: 5vh;
+        width: 44vw;
+        margin-top: 1vh;
+        margin-left: 25vw;
+    }
 
-
-
-
-
-}
-.anotherCity h2{
-
-
-    font-size:3vw;
-}
-
-/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-__-_-__-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-__-_-_-_-_*/
-@media screen and (max-width:903px){
     
-   .anotherCity:not(.chartAnother){
-        
-        width: 100vw;
+
+    .anotherCity>div>div {
+        padding-inline: 0.5vw;
+        padding-left: 5vw;
+        margin-right: 0.7vw;
+        border-radius: 5vh;
+        width:40vw;
+        margin-top: 1vh;
        
         /*margin-top: 90vh;*/
     }
+
+    .anotherCity > div:nth-of-type(2) {
+
+        margin-left:25vw;
+    }
+    .anotherCity > div:nth-of-type(3) {
+
+        margin-left:25vw;
+    }
+    .anotherCity > div:nth-of-type(4) {
+
+        margin-left:25vw;
+    }
     
-}
 
+    .anotherCity > div:nth-of-type(5) {
 
-@media screen and (max-width:579px){
-
-    .anotherCity:not(.chartAnother){
-        
-        width: 90vw;
-       
-        
+        margin-left:25vw;
     }
-    .anotherCity h2{
+    .anotherCity > div:nth-of-type(6) {
 
-
-        font-size:5vw;
+        margin-left:25vw;
     }
-    .anotherCity>div>div:not(.chartAnother){
-        width: 26.3vw ;
-        margin-bottom: 1vh;
-        
-       
+    .anotherCity > div:nth-of-type(7) {
+
+        margin-left:25vw;
     }
 
-}
-@media screen and (max-width:872px){
-    .chartAnother{
-        
-        margin-right: 10vw !important;
-       
-       /* margin-top: -90vh;*/
-        
+    .anotherCity h2 {
+
+
+        font-size: 10vw;
     }
+    .return{
 
-
+display: flex;
+       justify-content: center;
+     
+     }
 
 }

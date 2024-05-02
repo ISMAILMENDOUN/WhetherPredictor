@@ -12,6 +12,7 @@ unit="metric";
 symbol='°C';
 }
 function getCity(){
+  let city=document.getElementById("city").value;
     let existingChart = Chart.getChart("myChart1");
     let anotherCity=document.querySelector(".anotherCity");
     let chartAnother=document.querySelector(".chartAnother");
@@ -23,7 +24,7 @@ function getCity(){
         
    
 
-    let city=document.getElementById("city").value;
+    
     let showAlert = true;
    
     
@@ -120,7 +121,7 @@ anotherCity.appendChild(chartGraph);
     <div><p id="myHumidity"><i class="fas fa-tint"></i> ${data.list[0].main.humidity}%</p></div>
     <div><p id="myWind"><i class=" fas fa-wind"></i> ${data.list[0].wind.speed} m/s</p></div>
     ${extremeC}</div>`;
-    
+    html.style.backgroundColor=colorChange(data.list[0].weather[0].description);
     anotherCity.appendChild(html);
     //console.log(data.list[i].dt_txt);
     
@@ -170,7 +171,7 @@ anotherCity.appendChild(chartGraph);
 for(let i=1;i<data.list.length;i++){
     
     let d=new Date(data.list[i].dt_txt);
-    if(d.getHours()==0){
+    if(d.getHours()==12){
         let dChart=data.list[i].dt_txt;
 let tempChart=data.list[i].main.temp.toFixed(2)
 if(unit=="metric"){
@@ -219,7 +220,7 @@ html.innerHTML=`
 <div><p id="myHumidity"><i class="fas fa-tint"></i> ${data.list[i].main.humidity} %</p></div>
 <div><p id="myWind"><i  class=" fa-solid fa-wind"></i> ${data.list[i].wind.speed} m/s</p></div>
 ${extremeC}</div>`;
-
+html.style.backgroundColor=colorChange(data.list[i].weather[0].description);
 anotherCity.appendChild(html);
 //console.log(data.list[i].dt_txt);
 
@@ -355,6 +356,7 @@ html1.innerHTML=`<a href="#" onclick="hours3Forcast()"<div><h2 id="mCityName">${
 ${data.list[0].main.humidity} %</p></div>
 <div><p id="myWind"><i class=" fas fa-wind"></i>
     ${data.list[0].wind.speed} m/s</p></div></a>`;
+    html1.style.backgroundColor=colorChange(data.list[0].weather[0].description);
 let dChart=data.list[0].dt_txt;
 let fdate;
 
@@ -376,7 +378,7 @@ main.appendChild(html1);
 for(let i=1;i<data.list.length;i++){
     
     let d=new Date(data.list[i].dt_txt);
-    if(d.getHours()==0){
+    if(d.getHours()==12){
         let dChart=data.list[i].dt_txt;
 let tempChart=data.list[i].main.temp.toFixed(2)
 chartD.push( toDayWeek(dChart));
@@ -390,6 +392,7 @@ html.innerHTML=`<div><h2 id="mCityName">${data.city.name}</h2></div>
 <div><p id="mCity"><i class="fas fa-temperature-three-quarters"></i> ${data.list[i].main.temp.toFixed(2)+" "+symbol}</p></div>
 <div><p id="myHumidity"><i class="fas fa-tint"></i> ${data.list[i].main.humidity} %</p></div>
 <div><p id="myWind"><i class=" fas fa-wind"></i> ${data.list[i].wind.speed} m/s</p></div>`;
+html.style.backgroundColor=colorChange(data.list[i].weather[0].description);
 main.appendChild(html);
 console.log(data.list[i].dt_txt);
 
@@ -471,6 +474,8 @@ location.reload();
  }
 
 function  hours3Forcast(){
+  
+  document.querySelector(".anotherCity").innerHTML="";
   let main=document.querySelector(".main");
   main.innerHTML="";
   let myLatitude;
@@ -498,10 +503,15 @@ function(position){
     
     .then(data=>{
         let main=document.querySelector(".main");
+        let returnn=document.querySelector(".return");
         let html1=document.createElement("div");
         const chartD=[];
         const chartT=[];
-html1.innerHTML=`<a href="#" onclick="hours3Forcast()"<div><h2 id="mCityName">${data.city.name}</h2></div>
+        let rtn=document.createElement("p"); 
+        rtn.className="return";
+        rtn.innerHTML=`<a href="#" onclick="location.reload()"><i class="fa-solid fa-circle-arrow-left"></i> Return</a>`;
+        returnn.appendChild(rtn);
+        html1.innerHTML=`<div><h2 id="mCityName">${data.city.name}</h2></div>
 <div><h3 id="mCountry">${data.city.country}</h3></div>
 <div><h4>Now</h4></div>
 <div><img src="https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png" alt="" id="myIcon"></div>
@@ -511,7 +521,8 @@ html1.innerHTML=`<a href="#" onclick="hours3Forcast()"<div><h2 id="mCityName">${
 <div><p id="myHumidity"><i class="fas fa-tint"></i>
 ${data.list[0].main.humidity} %</p></div>
 <div><p id="myWind"><i class=" fas fa-wind"></i>
-    ${data.list[0].wind.speed} m/s</p></div></a>`;
+    ${data.list[0].wind.speed} m/s</p></div>`;
+    html1.style.backgroundColor=colorChange(data.list[0].weather[0].description);
 let dChart=data.list[0].dt_txt;
 let fdate;
 
@@ -547,6 +558,7 @@ html.innerHTML=`<div><h2 id="mCityName">${data.city.name}</h2></div>
 <div><p id="mCity"><i class="fas fa-temperature-three-quarters"></i> ${data.list[i].main.temp.toFixed(2)+" "+symbol}</p></div>
 <div><p id="myHumidity"><i class="fas fa-tint"></i> ${data.list[i].main.humidity} %</p></div>
 <div><p id="myWind"><i class=" fas fa-wind"></i> ${data.list[i].wind.speed} m/s</p></div>`;
+html.style.backgroundColor=colorChange(data.list[i].weather[0].description);
 main.appendChild(html);
 console.log(data.list[i].dt_txt);
 
@@ -577,6 +589,7 @@ maximumAge:0}
             else{
                 console.log("geolocation is not supported in this browser")
             }
+           
 
 }
 
@@ -600,3 +613,17 @@ function toTime(d){
 
 
 }
+
+function colorChange(description){
+if(description.includes("cloud")||description.includes("rain")){
+  return "gray";
+}
+if(description.includes("clear")){
+ return "aqua";
+}
+}
+/*if(document.querySelector(".anotherCity")!=""){
+
+  document.querySelector(".anotherCity").style.marginBottom="25vh";
+
+}*/

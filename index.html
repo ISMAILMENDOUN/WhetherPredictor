@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <div class="container">
     <div class="searchUnit">
     <div class="search"><input id="city" type="text"><br><br><a href="#" onclick="getCity()">Search a city</a></div>
     <div class="unt"><input id="units" list="units1">
@@ -18,6 +19,7 @@
         </datalist><br><br><a href="#anotherCity" onclick="changeUnits()">Change unit</a>
     </div>
 </div>
+<section class="return"></section>
 <section id="anotherCity" class="anotherCity">
     
 </section>
@@ -46,11 +48,12 @@
 
     </section>
 
-    
+</div>
     
     <section class="Forecast"></section>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
 </body>
 
 </html>
