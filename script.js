@@ -1,4 +1,4 @@
-const apiKey = '27d2f772a50c29538689a99856dcc049';
+const apiKey = 'd572fae0473115181503b8d193c6da2c';
 let unit=localStorage.getItem('unit');
 if(unit=="metric"){document.querySelector("#units").value="Celisius";}
 if(unit=="standard"){document.querySelector("#units").value="Kelvin";}
